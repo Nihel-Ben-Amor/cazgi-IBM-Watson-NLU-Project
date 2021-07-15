@@ -12,7 +12,7 @@ class App extends React.Component {
         }
   
   renderTextArea = ()=>{
-    document.getElementById("textinput").value = "";
+    document.getElementById("textinput").value = "analyseur de sentiment";
     if(this.state.mode === "url") {
       this.setState({innercomp:<textarea rows="4" cols="50" id="textinput"/>,
       mode: "text",
@@ -55,7 +55,7 @@ class App extends React.Component {
       } else if (response.data === "negative"){
         output = <div style={{color:"red",fontSize:20}}>{response.data}</div>
       } else {
-        output = <div style={{color:"orange",fontSize:20}}>{response.data}</div>
+        output = <div style={{color:"yellow",fontSize:20}}>{response.data}</div>
       }
       this.setState({sentimentOutput:output});
     });
