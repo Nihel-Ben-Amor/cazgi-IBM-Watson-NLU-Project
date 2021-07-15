@@ -12,7 +12,7 @@ class App extends React.Component {
         }
   
   renderTextArea = ()=>{
-    document.getElementById("textinput").value = "analyseur de sentiment";
+    document.getElementById("textinput").value = "";
     if(this.state.mode === "url") {
       this.setState({innercomp:<textarea rows="4" cols="50" id="textinput"/>,
       mode: "text",
